@@ -1,0 +1,2 @@
+class GameMapController < ApplicationController
+end

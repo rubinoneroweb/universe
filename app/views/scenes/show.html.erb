@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Short desc:</strong>
+  <%= @scene.short_desc %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @scene.desc %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @scene.image %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @scene.location_id %>
+</p>
+
+<%= link_to 'Edit', edit_scene_path(@scene) %> |
+<%= link_to 'Back', scenes_path %>

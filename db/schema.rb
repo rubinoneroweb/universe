@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227165905) do
+ActiveRecord::Schema.define(version: 20131229104111) do
 
   create_table "characters", force: true do |t|
     t.string   "name"
     t.string   "short_desc"
     t.text     "desc"
-    t.integer  "location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "game_maps", force: true do |t|
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20131227165905) do
     t.integer  "location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+	t.integer  "character_id"
   end
 
 end

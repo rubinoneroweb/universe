@@ -10,15 +10,31 @@
   <%= @scene.desc %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @scene.image %>
-</p>
+<div class="scene_bg" style="background:url(<%= image_url @scene.image + ".jpg" %>)">
+  
+  <%= image_tag @scene.character.image + ".png" %>
+</div>
+
+
 
 <p>
   <strong>Location:</strong>
   <%= @scene.location_id %>
 </p>
+<p>
+  <%= @scene.character.name %> is here.  <%= @scene.character.short_desc %> 
+</p>
+<p>
+<%= @scene.character.name %> is here.
+</p>
+
+<%= link_to "Click me",
+          {:controller => 'scenes', :action => 'get_info', :my_target => 'update_me', :id => @scene.id},
+           :remote => true %>
+
+<div id="update_me">Hello </div>
+
+
 
 <%= link_to 'Edit', edit_scene_path(@scene) %> |
 <%= link_to 'Back', scenes_path %>

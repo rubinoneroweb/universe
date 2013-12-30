@@ -27,6 +27,11 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Use Bootstrap for responsive layout
+gem 'bootstrap-sass', '~> 3.0.3.0'
+
+gem 'rails_layout'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

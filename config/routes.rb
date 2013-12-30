@@ -1,4 +1,7 @@
 Universe::Application.routes.draw do
+
+	get "scenes/get_info" 
+	
   resources :items
 
   resources :scenes
@@ -8,6 +11,10 @@ Universe::Application.routes.draw do
   resources :characters
 
   resources :game_maps
+  
+  root :to => "character#index"
+  
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

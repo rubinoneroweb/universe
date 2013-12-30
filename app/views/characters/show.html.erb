@@ -16,9 +16,11 @@
 </p>
 
 <p>
-  <strong>Location:</strong>
-  <%= @character.location_id %>
+  
+  <%= image_tag @character.image + ".png" %>
 </p>
+
+
 
 <%= link_to 'Edit', edit_character_path(@character) %> |
 <%= link_to 'Back', characters_path %>

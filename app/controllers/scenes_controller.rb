@@ -61,6 +61,12 @@ class ScenesController < ApplicationController
     end
   end
 
+  
+ def get_info
+		@scene = Scene.find(params[:id])
+		@target = params[:my_target]
+		@data = @scene.character.desc
+	end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_scene
@@ -69,6 +75,6 @@ class ScenesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scene_params
-      params.require(:scene).permit(:short_desc, :desc, :image, :location_id)
+      params.require(:scene).permit(:short_desc, :desc, :image, :location_id, :character_id)
     end
 end
